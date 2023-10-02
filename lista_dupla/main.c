@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "doublelist.h"
-#include "log.h"
+#include "../log.h"
 
 bool compara(void *data1, void *data2) {
 	int *d1 = (int*)data1;
