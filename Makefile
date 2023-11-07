@@ -105,10 +105,10 @@ hash: clear
 	@echo      tabela hash
 	@echo =================================
 	@echo Compilando o programa hash
-	@gcc tabela_hash/hash.c tabela_hash/hash.h tabela_hash/hashtest.c log.h log.c -o geral
+	@gcc lista_dupla/doublelist.c lista_dupla/doublelist.h tabela_hash/hash.c tabela_hash/hash.h tabela_hash/main.c log.h log.c -o hash
 	@echo Tornando o arquivo executável
 	@chmod +x hash
 	@echo Executando o programa hash
 	@echo ======================================================
 	@echo
-	@./geral	
+	@./hash	
