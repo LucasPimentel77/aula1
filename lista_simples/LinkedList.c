@@ -135,6 +135,35 @@ void* top(LinkedList *list){
     log_trace("top <-\n");
     return(aux);
 }
+int order_add(LinkedList *list, void *data, confront menor){
+    Node *novo = malloc(sizeof(Node));
+    if(novo == NULL){
+        log_error("memória insuficiente para operação em oreder_add");
+        return 0;
+    }
+    novo->data = data;
+    if(isEmpty(list)){
+        list->first = novo;
+        novo->next = NULL;
+    }
+    else if (menor(data,list->first->data) < 0){
+        novo->next = list->first;
+        log_error("%d ",*(int*)data);
+        list->first = list->first->next;
+    }
+    else{
+      /* int * d1 = (int*)data;
+        int * d2 = (int*)list->first->data;
+        log_error("%d %d %d",menor(data,list->first->data),*d1,*d2);*/
+    Node *aux = list->first;
+    while(aux->next != NULL && menor(data,aux->next->data) < 0)
+        aux = aux->next;
+    novo->next = aux->next;
+    aux->next = novo;
+    }
+    list->size++;
+    return 1;
+}
 
 bool isEmpty(LinkedList *list){
     log_trace("isEmpty ->");
