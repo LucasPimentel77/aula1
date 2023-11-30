@@ -1,0 +1,48 @@
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:8: init ->
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:9: iniciando a lista
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:12: list->first: (nil)
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:13: list->size: 0
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:14: init <-
+
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 0
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:50: dequeue ->
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:51: Removendo o primeiro dado da fila
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 1
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:58: list->first: 0x56160ac6c6c0
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:64: no removido: 0x56160ac6c6a0
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:65: new size: 0
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:66: dado removido com sucesso
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:67: dequeue <-
+
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 0
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 1
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 ERROR lista_simples/LinkedList.c:158: 13 14 13
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 2
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 ERROR lista_simples/LinkedList.c:151: 12 -1 
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:50: dequeue ->
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:51: Removendo o primeiro dado da fila
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 3
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:58: list->first: 0x56160ac6cb30
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:64: no removido: 0x56160ac6cb10
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:65: new size: 2
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:66: dado removido com sucesso
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:67: dequeue <-
+
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:50: dequeue ->
+2023-11-29 02:47:16 INFO  lista_simples/LinkedList.c:51: Removendo o primeiro dado da fila
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:170: isEmpty ->
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:177: list->size = 2
+2023-11-29 02:47:16 TRACE lista_simples/LinkedList.c:178: isEmpty <-
+2023-11-29 02:47:16 DEBUG lista_simples/LinkedList.c:58: list->first: (nil)

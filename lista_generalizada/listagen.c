@@ -17,12 +17,19 @@ int addAtom(Node **list, int data){
     if(*list==NULL)
         *list->tail = no;
     else{
-        
+        Node *aux = NULL;
+        for(aux = *list; aux->tail != NULL; aux = aux->tail);
+        aux->tail = no;
     }
 
     log_trace("addAtom <-\n");
+    return 1;
 }
-int addList(Node **list, Node **subList);
+int addList(Node **list, Node **subList){
+    log_trace("addList ->");
+    
+    log_trace("addList <-\n");
+}
 Node* head(Node *list);
 Node* tail(Node *list);
 void showGeneralizedList(Node *list);

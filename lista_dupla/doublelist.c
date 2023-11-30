@@ -5,8 +5,8 @@
 #include "../log.h"
 
 void init(DoublyLinkedList *list){
-    log_trace("init ->");
-    log_info("iniciando a lista");
+    //log_trace("init ->");
+   // log_info("iniciando a lista");
     Node *no = (Node*)malloc(sizeof(Node));
     if(no == NULL){
         log_error("nao ha memoria suficiente para alocar o no");
@@ -17,8 +17,8 @@ void init(DoublyLinkedList *list){
     no->data = NULL;
     list->first = no;
     list->size = 0;
-    log_debug("no(data,next,previous): %p(%p,%p,%p)", no, no->data, no->next, no->previous);
-    log_trace("init <-\n");
+   // log_debug("no(data,next,previous): %p(%p,%p,%p)", no, no->data, no->next, no->previous);
+   // log_trace("init <-\n");
 }
 int enqueue(DoublyLinkedList *list, void *data){
     log_trace("enqueue ->");
@@ -300,5 +300,14 @@ bool removeData(DoublyLinkedList *list, void *data, compare equal){
     log_trace("removeData <-\n");
     return false;
 }
-void show(DoublyLinkedList *list, printNode print);
+void show(DoublyLinkedList *list, printNode print){
+    Node *aux = list->first->next;
+    if(isEmpty(list))
+        printf("LISTA VAZIA");
+    
+    for(int i=0; i<list->size; i++){
+        print(aux->data);
+        aux = aux->next;
+    }
+}
 void showMem(DoublyLinkedList *list);

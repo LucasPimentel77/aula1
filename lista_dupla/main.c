@@ -18,7 +18,7 @@ void impressao(void *data) {
 int main() {
 	FILE *file = fopen("program.log","w");
 	
-	log_set_level(LOG_INFO);
+	log_set_level(LOG_WARN);
 	log_add_fp(file, LOG_TRACE);
 
 	DoublyLinkedList lista;
@@ -50,12 +50,7 @@ int main() {
 	int fst = indexOf(&lista,n2,compara);
 	printf("posição: %d\n\n",fst );
 
-	numero = dequeue(&lista);
-	printf("numero: %d\n\n", *numero);
-
-	numero = pop(&lista);
-	printf("numero: %d\n\n", *numero);
-
+	show(&lista, impressao);
 	
 	free (numero);
 	printf("programa deu certo\n");

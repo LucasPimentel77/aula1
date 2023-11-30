@@ -31,28 +31,40 @@ int main() {
 
 	LinkedList lista;
 	init(&lista);
-	int *numero = malloc(sizeof(int));
+	int *numero = (int*)malloc(sizeof(int));
 	*numero = 15;
 	order_add(&lista, numero, equal);
 
-	int *numero1 = malloc(sizeof(int));
+	int *kw = dequeue(&lista);
+		printf("%d\n",*kw);
+
+	int *numero1 = (int*)malloc(sizeof(int));
 	*numero1 = 13;
 	order_add(&lista, numero1, equal);
 
-	int *numero2 = malloc(sizeof(int));
+	int *numero2 = (int*)malloc(sizeof(int));
 	*numero2 = 14;
 	order_add(&lista, numero2, equal);
 
-	int *numero3 = malloc(sizeof(int));
+	int *numero3 = (int*)malloc(sizeof(int));
 	*numero3 = 12;
 	order_add(&lista, numero3, equal);
 
-	int *numero4 = malloc(sizeof(int));
-	*numero4 = 16;
+	kw = dequeue(&lista);
+		printf("%d\n",*kw);
+
+		kw = dequeue(&lista);
+		printf("%d\n",*kw);
+
+		kw = dequeue(&lista);
+		printf("%d\n",*kw);
+
+	int *numero4 = (int*)malloc(sizeof(int));
+	*numero4 = 17;
 	order_add(&lista, numero4, equal);
     
-	for(int i=0; i<5; i++){
-		int *kw = dequeue(&lista);
+	for(int i=0; i<0; i++){
+		kw = dequeue(&lista);
 		printf("%d\n",*kw);
 	}
 	free (numero);

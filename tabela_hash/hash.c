@@ -4,11 +4,9 @@
 #include "hash.h"
 
 void initHash(HashStruct *hashStruct){
-    log_trace("initHash ->");
-    for(int i=0;i<=MAX; i++)
+    for(int i=0;i<MAX; i++)
         init(&(hashStruct->hashes[i]));
     hashStruct->size=0;
-    log_trace("initHash <-\n");
 }
 bool isHashEmpty(HashStruct *hashStruct){
     return (hashStruct->size==0);
@@ -33,7 +31,23 @@ bool containsKey(HashStruct *hashStruct, char *key, compare equal){
     return (pos!=-1)?true:false;
 }
 void* get(HashStruct *hashStruct, char *key, compare equal){
-
+    int hashValue = hash(key);
+    Node *aux = hashStruct->hashes[hashValue].first->next;
+    while(aux!=hashStruct->hashes[hashValue].first && !equal(aux->data, key))
+        aux=aux->next;
+    return aux->data;
 }
-void* removeKey(HashStruct *hashStruct, char *key, compare equal);
-void showHashStruct(HashStruct *hashStruct);
+void* removeKey(HashStruct *hashStruct, char *key, compare equal){
+    int hashValue = hash(key);
+    int pos = indexOf(&hashStruct->hashes[hashValue], key, equal);
+    void* result = removePos(&hashStruct->hashes[hashValue], pos);
+    if (result!=NULL) hashStruct->size--;
+        return result;
+}
+void showHashStruct(HashStruct *hashStruct, printNode print){
+    for (int i=0; i < MAX; i++) {
+        printf("Hash %d has %d elements: ",i,hashStruct->hashes[i].size);
+        //show(&hashStruct->hashes[i],print);
+        printf("\n");
+    }
+}

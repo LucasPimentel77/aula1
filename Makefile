@@ -46,6 +46,12 @@ clear:
 	@rm -f ponteiro_duplo
 	@rm -f LinkedList
 	@rm -f ola
+	@rm -f duplo
+	@rm -f geral
+	@rm -f hash
+	@rm -f teste1
+	@rm -f compress
+
 
 help:
 	@echo
@@ -104,11 +110,22 @@ hash: clear
 	@echo =================================
 	@echo      tabela hash
 	@echo =================================
-	@echo Compilando o programa hash
+	@echo Compilando make o programa hash
 	@gcc lista_dupla/doublelist.c lista_dupla/doublelist.h tabela_hash/hash.c tabela_hash/hash.h tabela_hash/main.c log.h log.c -o hash
 	@echo Tornando o arquivo executável
 	@chmod +x hash
 	@echo Executando o programa hash
 	@echo ======================================================
 	@echo
-	@./hash	
+	@./hash
+
+teste1: clear
+
+	@gcc teste.c -o teste1	
+	@chmod +x teste1
+	@./teste1
+
+compress: clear	
+	@gcc tree_compress/tree.c tree_compress/tree.h tree_compress/main.c -o compress	
+	@chmod +x compress
+	@./compress
